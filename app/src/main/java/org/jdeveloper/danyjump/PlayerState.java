@@ -61,4 +61,4 @@ public class PlayerState {
     public void resetCredits(){
         lives=0;
     }
-}//ENd class
+}//end class

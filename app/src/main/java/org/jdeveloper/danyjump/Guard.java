@@ -47,5 +47,25 @@ public class Guard extends GameObject {
 
     public void update(long fps, float gravity){
 
+        if (currentWaypoint ==1){//Heading left
+            if (getWorldLocation().x <= waypointX1){
+                currentWaypoint=2;
+                setxVelocity(MAX_X_VELOCITY);
+                setFacing(RIGHT);
+            }
+
+        }
+
+        if (currentWaypoint ==2){//Heading right
+            if (getWorldLocation().x >= waypointX2){
+                currentWaypoint =1;
+                setxVelocity(-MAX_X_VELOCITY);
+                setFacing(LEFT);
+            }
+
+        }
+        move(fps);
+        setRectHitbox();
+
     }
 }

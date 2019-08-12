@@ -8,6 +8,8 @@ public class SlineFrontEnemy extends GameObject {
     private float waypointright;
     private int currentWaypoint;
     final float MAX_X_VELOCITY=3;
+    private int hitByBulletSlineFrontEnemy = 3;
+    private int numberOfBullet=0;
 
     SlineFrontEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){
 
@@ -68,4 +70,13 @@ public class SlineFrontEnemy extends GameObject {
         setRectHitbox();
 
     }
+
+    private int getHitByBulletSlineFrontEnemy(){
+        return hitByBulletSlineFrontEnemy;
+    }
+
+    private int getNumberOfBullet(){
+        return numberOfBullet;
+    }
 }
+

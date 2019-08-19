@@ -16,7 +16,7 @@ public class ZombieEnemy extends GameObject {
         final int ANIMATION_FPS=8;
         final int ANIMATION_FRAME_COUNT=6;
         final String BITMAP_NAME="zombie";
-        final float HEIGHT=2;
+        final float HEIGHT=2f;
         final float WIDTH=1;
 
         setHeight(HEIGHT);

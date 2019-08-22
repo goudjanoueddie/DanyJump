@@ -83,6 +83,30 @@ public class MachineGun extends GameObject{
         return shotFired;
     }
 
+
+    public void shootSbotEnemy(float ownerX, float ownerY, int ownerFacing, float ownerHeight){
+
+
+        if(System.currentTimeMillis() - lastShotTime > 1000/rateOfFire){
+
+            //spawn another bullet;
+            nextBullet ++;
+            if(numBullets >= maxBullets){
+                numBullets = maxBullets;
+            }
+            if(nextBullet == maxBullets){
+                nextBullet = 0;
+            }
+            lastShotTime = System.currentTimeMillis();
+            bullets.add(nextBullet,
+                    new Bullet(ownerX,
+                            (ownerY+ ownerHeight/3), speed, ownerFacing));
+
+            numBullets++;
+        }
+
+    }
+
     public void upgradeRateOfFire(){
         rateOfFire +=2;
     }

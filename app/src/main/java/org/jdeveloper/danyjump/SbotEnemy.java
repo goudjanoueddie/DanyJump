@@ -4,6 +4,8 @@ import android.content.Context;
 
 public class SbotEnemy extends GameObject {
 
+    public MachineGun bfg;
+
     private float waypointleft;
     private float waypointrright;
     private int currentWaypoint;
@@ -16,6 +18,8 @@ public class SbotEnemy extends GameObject {
         final String BITMAP_NAME="sbot";
         final float HEIGHT =2;
         final float WIDTH=2;
+
+        bfg = new MachineGun();
 
         setHeight(HEIGHT);
         setWidth(WIDTH);
@@ -63,10 +67,18 @@ public class SbotEnemy extends GameObject {
             }
         }
 
+        bfg.update(fps, gravity);
+
 
         move(fps);
         setRectHitbox();
 
+    }
+
+
+    public void pullTriggerSbotEnemy() {
+        //Try and fire a shot
+       bfg.shootSbotEnemy(this.getWorldLocation().x, this.getWorldLocation().y, getFacing(), getHeight());
     }
 
 

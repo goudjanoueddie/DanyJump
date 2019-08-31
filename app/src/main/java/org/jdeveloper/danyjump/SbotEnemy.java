@@ -19,7 +19,7 @@ public class SbotEnemy extends GameObject {
         final float HEIGHT =2;
         final float WIDTH=2;
 
-        bfg = new MachineGun();
+        //bfg = new MachineGun();
 
         setHeight(HEIGHT);
         setWidth(WIDTH);
@@ -67,7 +67,7 @@ public class SbotEnemy extends GameObject {
             }
         }
 
-        bfg.update(fps, gravity);
+       ///bfg.update(fps, gravity);
 
 
         move(fps);

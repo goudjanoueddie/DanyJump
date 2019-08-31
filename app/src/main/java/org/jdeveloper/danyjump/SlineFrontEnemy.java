@@ -8,8 +8,8 @@ public class SlineFrontEnemy extends GameObject {
     private float waypointright;
     private int currentWaypoint;
     final float MAX_X_VELOCITY=3;
-    private int hitByBulletSlineFrontEnemy = 3;
-    private int numberOfBullet=0;
+    /*private int hitByBulletSlineFrontEnemy = 3;
+    private int numberOfBullet=0;*/
 
     SlineFrontEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){
 
@@ -71,6 +71,7 @@ public class SlineFrontEnemy extends GameObject {
 
     }
 
+    /*
     private int getHitByBulletSlineFrontEnemy(){
         return hitByBulletSlineFrontEnemy;
     }
@@ -78,5 +79,7 @@ public class SlineFrontEnemy extends GameObject {
     private int getNumberOfBullet(){
         return numberOfBullet;
     }
+
+    */
 }
 

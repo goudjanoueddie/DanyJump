@@ -2,6 +2,7 @@ package org.jdeveloper.danyjump;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MachineGun extends GameObject{
+
     private int maxBullets = 10;
     private int numBullets;
     private int nextBullet;

@@ -2,21 +2,20 @@ package org.jdeveloper.danyjump;
 
 import android.content.Context;
 
-public class CampFireEnemy extends GameObject{
+public class BirdsEnemy extends GameObject {
 
     private float waypointX1;
     private float waypointX2;
     private int currentWaypoint;
-    final float MAX_X_VELOCITY=4;
+    final float MAX_X_VELOCITY=3;
 
+    BirdsEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){
 
-    CampFireEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){
-
-        final int ANIMATION_FPS=10;
-        final int ANIMATION_FRAME_COUNT=10;
-        final String BITMAP_NAME="campfire";
-        final float HEIGHT = 3;
-        final float WIDTH = 2;
+        final int ANIMATION_FPS=8;
+        final int ANIMATION_FRAME_COUNT=3;
+        final String BITMAP_NAME="birds";
+        final float HEIGHT=4;
+        final float WIDTH=1;
 
         setHeight(HEIGHT);
         setWidth(WIDTH);
@@ -27,7 +26,7 @@ public class CampFireEnemy extends GameObject{
         setActive(true);
         setVisible(true);
 
-        //Animate our object
+        //animate our object
         setAnimFps(ANIMATION_FPS);
         setAnimFrameCount(ANIMATION_FRAME_COUNT);
         setAnimated(context,pixelsPerMetre,true);
@@ -35,9 +34,6 @@ public class CampFireEnemy extends GameObject{
         setWorldLocation(worldStartX,worldStartY,0);
         setxVelocity(-MAX_X_VELOCITY);
         currentWaypoint=1;
-
-
-
     }
 
     public void setWaypoints(float x1,float x2){
@@ -48,27 +44,31 @@ public class CampFireEnemy extends GameObject{
 
     public void update(long fps,float gravity){
 
-        if (currentWaypoint ==1){
-            if (getWorldLocation().x <= waypointX1){
+        if(currentWaypoint ==1){ //Heading left
+            if (getWorldLocation().x<= waypointX1){
+
                 currentWaypoint=2;
                 setxVelocity(MAX_X_VELOCITY);
                 setFacing(RIGHT);
 
             }
+
         }
 
-        if (currentWaypoint ==2){
+        if (currentWaypoint ==2){ //Heading right
 
-            if (getWorldLocation().x >=waypointX2){
-                currentWaypoint=1;
+            if (getWorldLocation().x >= waypointX2){
+                currentWaypoint =1;
                 setxVelocity(-MAX_X_VELOCITY);
                 setFacing(LEFT);
-
             }
+
         }
 
         move(fps);
         setRectHitbox();
 
     }
+
+
 }

@@ -14,12 +14,17 @@ public class Cart extends GameObject {
         setHeight(HEIGHT);
         setType(type);
         setBitmapName("cart");
-        setActive(false);
+        //setActive(false);
+        setActive(true);
+        //setRectHitbox();
+
         Random rand =new Random();
         if(rand.nextInt(2) ==0){
             setWorldLocation(worldStartX,worldStartY,-1);
+            setRectHitbox();
         }else{
             setWorldLocation(worldStartX,worldStartY,1);
+            setRectHitbox();
         }
     }
     public void update(long fps, float gravity) {

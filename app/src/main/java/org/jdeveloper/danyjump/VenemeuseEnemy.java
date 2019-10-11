@@ -6,9 +6,9 @@ public class VenemeuseEnemy extends GameObject {
 
         setTraversable();
         final float HEIGHT=4;
-        final float WIDTh=4;
+        final float WIDTH=4;
         setHeight(HEIGHT);
-        setWidth(WIDTh);
+        setWidth(WIDTH);
         setType(type);
         setBitmapName("venemeuse");
         setWorldLocation(worldStartX,worldStatY,0);

@@ -11,6 +11,7 @@ public class WhiteBrick extends GameObject {
         setWidth(WIDTH);
         setType(type);
         setBitmapName("brickwhite");
+        //setBitmapName("whitebrique2");
         setWorldLocation(worldStartX,worldStartY,0);
         setRectHitbox();
 

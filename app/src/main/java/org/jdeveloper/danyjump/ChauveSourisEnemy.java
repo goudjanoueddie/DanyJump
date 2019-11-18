@@ -2,21 +2,22 @@ package org.jdeveloper.danyjump;
 
 import android.content.Context;
 
-public class BlobEnemy extends GameObject {
+public class ChauveSourisEnemy extends GameObject {
 
-    private float waypointX1;
-    private float waypointX2;
+    private float waypointleft;
+    private float waypointright;
     private int currentWaypoint;
-    final float MAX_X_VELOCITY=3;
+    final float MAX_X_VELOCITY=2;
 
 
-    BlobEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){
 
-        final int ANIMATION_FPS=5;
+    ChauveSourisEnemy(Context context, float worldStartX, float worldStartY, char type, int pixelsPerMetre){
+
+        final int ANIMATON_FPS=4;
         final int ANIMATION_FRAME_COUNT=5;
-        final String BITMAP_NAME="blob";
+        final String BITMAP_NAME="chauvesouris";
         final float HEIGHT=2;
-        final float WIDTH=1;
+        final float WIDTH=3;
 
         setHeight(HEIGHT);
         setWidth(WIDTH);
@@ -27,8 +28,7 @@ public class BlobEnemy extends GameObject {
         setActive(true);
         setVisible(true);
 
-
-        setAnimFps(ANIMATION_FPS);
+        setAnimFps(ANIMATON_FPS);
         setAnimFrameCount(ANIMATION_FRAME_COUNT);
         setAnimated(context,pixelsPerMetre,true);
 
@@ -39,27 +39,29 @@ public class BlobEnemy extends GameObject {
     }
 
     public void setWaypoints(float x1,float x2){
-        waypointX1=x1;
-        waypointX2=x2;
+        waypointleft=x1;
+        waypointright=x2;
     }
 
 
-    public void update(long fps,float gravity){
-        if (currentWaypoint ==1){
-            if (getWorldLocation().x <=waypointX1){
+    public void update(long fps, float gravity){
+
+        if (currentWaypoint == 1){//left
+            if (getWorldLocation().x <= waypointleft){
                 currentWaypoint=2;
                 setxVelocity(MAX_X_VELOCITY);
                 setFacing(RIGHT);
-
             }
+
         }
 
-        if (currentWaypoint ==2){
-            if (getWorldLocation().x >=waypointX2){
+        if (currentWaypoint ==2){//right
+            if(getWorldLocation().x >= waypointright){
                 currentWaypoint=1;
                 setxVelocity(-MAX_X_VELOCITY);
                 setFacing(LEFT);
             }
+
         }
 
         move(fps);

@@ -19,6 +19,9 @@ public class BreakBrick extends GameObject {
 
     public void update(long fps,float gravity){
 
+        //this.move(fps);
+        setRectHitbox();
+
     }
 
 

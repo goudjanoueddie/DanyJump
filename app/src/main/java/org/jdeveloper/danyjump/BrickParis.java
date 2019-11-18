@@ -1,8 +1,9 @@
 package org.jdeveloper.danyjump;
 
-public class WhiteBrick extends GameObject {
+public class BrickParis extends GameObject {
 
-    WhiteBrick(float worldStartX,float worldStartY,char type){
+
+    BrickParis(float worldStartX,float worldStartY,char type){
 
         setTraversable();
         final float HEIGHT=1;
@@ -10,14 +11,13 @@ public class WhiteBrick extends GameObject {
         setHeight(HEIGHT);
         setWidth(WIDTH);
         setType(type);
-        setBitmapName("brickwhite");
+        setBitmapName("brickparis");
         setWorldLocation(worldStartX,worldStartY,0);
         setRectHitbox();
 
     }
 
-
-    public void update(long fps, float gravity) {
+    public void update(long fps,float gravity){
 
     }
 }

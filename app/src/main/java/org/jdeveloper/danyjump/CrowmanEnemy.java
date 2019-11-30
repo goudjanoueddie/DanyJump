@@ -7,7 +7,7 @@ public class CrowmanEnemy extends GameObject {
     private float waypointleft;
     private float waypointright;
     private int currentWaypoint;
-    final float MAX_X_VELOCITY=4;
+    final float MAX_X_VELOCITY=6;
 
 
     CrowmanEnemy(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre){

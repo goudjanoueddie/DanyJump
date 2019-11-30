@@ -2,33 +2,34 @@ package org.jdeveloper.danyjump;
 
 import java.util.Random;
 
-public class Cart extends GameObject {
+public class Helicoptere extends GameObject {
 
+    Helicoptere(float worldStartX,float worldStartY,char type){
 
-    Cart(float worldStartX,float worldStartY,char type){
-
-        final float HEIGHT =2;
+        final float HEIGHT=3;
         final float WIDTH=3;
 
         setWidth(WIDTH);
         setHeight(HEIGHT);
         setType(type);
-        setBitmapName("cart");
-        //setActive(false);
+        setBitmapName("helicoptere");
         setActive(true);
-        //setRectHitbox();
 
-        Random rand =new Random();
+        Random random=new Random();
 
-        if(rand.nextInt(2) ==0){
+        if(random.nextInt(2) ==0){
             setWorldLocation(worldStartX,worldStartY,-1);
             setRectHitbox();
         }else{
             setWorldLocation(worldStartX,worldStartY,1);
             setRectHitbox();
         }
+
+
+
     }
-    public void update(long fps, float gravity) {
+
+    public void update(long fps, float gravity){
 
     }
 }

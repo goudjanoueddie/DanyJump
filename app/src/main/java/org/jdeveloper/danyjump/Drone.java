@@ -7,8 +7,8 @@ public class Drone extends GameObject {
     long lastWaypointsetTime;
     PointF currentWaypoint;
 
-    final float MAX_X_VELOCITY = 3;
-    final float MAX_Y_VELOCITY = 3;
+    final float MAX_X_VELOCITY = 5;
+    final float MAX_Y_VELOCITY = 5;
 
     Drone(float worldStartX,float worldStartY,char type){
 

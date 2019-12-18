@@ -2,16 +2,16 @@ package org.jdeveloper.danyjump;
 
 import java.util.Random;
 
-public class ForestTree extends GameObject {
+public class ForestTree2 extends GameObject {
 
-    ForestTree(float worldStartX,float worldStartY,char type){
+    ForestTree2(float worldStartX,float worldStartY,char type){
 
         final float HEIGHT=4;
         final float WIDTH=4;
         setWidth(WIDTH);
         setHeight(HEIGHT);
         setType(type);
-        setBitmapName("foresttree");
+        setBitmapName("foresttree2");
         //setBitmapName("cat");
         setActive(false);
 
@@ -25,6 +25,7 @@ public class ForestTree extends GameObject {
 
             setWorldLocation(worldStartX,worldStartY,-1);
         }
+
     }
 
 

@@ -7,7 +7,7 @@ public class FireSpriteBlueEnemy extends GameObject {
     private float waypointhight;
     private float waypointbottom;
     private int currentWaypoint;
-    final float MAX_Y_VELOCITY=1;
+    final float MAX_Y_VELOCITY=7;
 
 
     FireSpriteBlueEnemy(Context context, float worldStartX, float worldStartY, char type, int pixelsPerMetre){

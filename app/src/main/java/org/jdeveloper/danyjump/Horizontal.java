@@ -12,15 +12,17 @@ public class Horizontal extends GameObject {
 
     Horizontal(Context context,float worldStartX,float worldStartY,char type,int pixelsPerMetre) {
 
-        setTraversable();
+
         final float HEIGHT=1;
         final float WIDTH=3;
+
+        setTraversable();
         setHeight(HEIGHT);
         setWidth(WIDTH);
         setType(type);
         setBitmapName("horizontalbarre");
-        setWorldLocation(worldStartX,worldStartY,0);
-        setRectHitbox();
+        //setWorldLocation(worldStartX,worldStartY,0);
+        //setRectHitbox();
 
         setMoves(true);
         setActive(true);
@@ -49,7 +51,7 @@ public class Horizontal extends GameObject {
             if (getWorldLocation().x <= waypointX1){
                 currentWaypoint=2;
                 setxVelocity(MAX_X_VELOCITY);
-                setFacing(RIGHT);
+                //setFacing(RIGHT);
             }
 
         }
@@ -58,7 +60,7 @@ public class Horizontal extends GameObject {
             if (getWorldLocation().x >= waypointX2){
                 currentWaypoint =1;
                 setxVelocity(-MAX_X_VELOCITY);
-                setFacing(LEFT);
+                //setFacing(LEFT);
             }
 
         }

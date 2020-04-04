@@ -28,7 +28,7 @@ public class FireSpriteRedEnemy extends GameObject {
         setActive(true);
         setVisible(true);
 
-        //MOving the bitmap
+        //Moving the bitmap
         setAnimFps(ANIMATION_FPS);
         setAnimFrameCount(ANIMATION_FRAME_COUNT);
         setAnimated(context,pixelsPerMetre,true);

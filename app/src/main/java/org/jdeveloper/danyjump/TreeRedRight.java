@@ -2,16 +2,19 @@ package org.jdeveloper.danyjump;
 
 import java.util.Random;
 
-public class TreeRedLeft extends GameObject {
+public class TreeRedRight extends GameObject {
 
-    TreeRedLeft(float worldStartX,float worldStartY,char type){
+
+
+    TreeRedRight(float worldStartX,float worldStartY,char type){
+
 
         final float HEIGHT=6;
         final float WIDTH=6;
         setWidth(WIDTH);
         setHeight(HEIGHT);
         setType(type);
-        setBitmapName("treeredleft");
+        setBitmapName("treeredright");
         setActive(false);
 
         Random random=new Random();
@@ -23,8 +26,6 @@ public class TreeRedLeft extends GameObject {
         }
 
     }
-
-
 
     public void update(long fps,float gravity){
 

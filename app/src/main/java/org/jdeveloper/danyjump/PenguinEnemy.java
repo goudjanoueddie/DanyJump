@@ -2,18 +2,19 @@ package org.jdeveloper.danyjump;
 
 import android.content.Context;
 
-public class GorilleEnemy extends GameObject {
+public class PenguinEnemy extends GameObject {
+
 
     private float waypointleft;
     private float waypointright;
     private int currentWaypoint;
-    final float MAX_X_VELOCITY=3;
+    final float MAX_X_VELOCITY=6;
 
-    GorilleEnemy(Context context, float worldStartX, float worldStartY, char type, int pixelsPerMetre){
+    PenguinEnemy(Context context, float worldStartX, float worldStartY, char type, int pixelsPerMetre){
 
         final int ANIMATION_FPS=8;
-        final int ANIMATION_FRAME_COUNT=8;
-        final String BITMAP_NAME="gorille";
+        final int ANIMATION_FRAME_COUNT=9;
+        final String BITMAP_NAME="penguin";
         final float HEIGHT=2;
         final float WIDTH=2;
 
@@ -35,7 +36,9 @@ public class GorilleEnemy extends GameObject {
         setxVelocity(-MAX_X_VELOCITY);
         currentWaypoint=1;
 
+
     }
+
 
     public void setWaypoints(float x1,float x2){
 
@@ -45,6 +48,7 @@ public class GorilleEnemy extends GameObject {
     }
 
     public void update(long fps,float gravity){
+
 
 
         if(currentWaypoint ==1){
@@ -68,6 +72,7 @@ public class GorilleEnemy extends GameObject {
 
         move(fps);
         setRectHitbox();
+
 
     }
 }

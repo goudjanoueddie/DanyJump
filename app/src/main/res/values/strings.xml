@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DanyJump</string>
+    <string name="button">Button</string>
 </resources>

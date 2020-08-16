@@ -60,10 +60,13 @@ public class MenuActivity extends FragmentActivity {
 
     public void btnPlayClick(View v){
 
-        Intent i=new Intent(this,PlatformActivity.class);
+        /*Intent i=new Intent(this,PlatformActivity.class);
+        startActivity(i);
+        finish();*/
+
+        Intent i=new Intent(this,PlayActivity.class);
         startActivity(i);
         finish();
-
 
 
     }

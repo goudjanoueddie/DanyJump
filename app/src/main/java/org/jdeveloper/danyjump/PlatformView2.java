@@ -90,7 +90,7 @@ public class PlatformView2 extends SurfaceView implements Runnable {
         //sm.playdefaultSound();
 
         //loadLevel("LevelCave", 10, 2);
-        loadLevel("LevelI", 10, 2);
+        loadLevel("LevelII", 10, 2);
         //loadLevel("LevelII", 10, 2);
 
         //loadLevel("LevelIII", 10, 2);

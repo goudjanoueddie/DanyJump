@@ -15,7 +15,24 @@ public class PlayActivity extends Activity {
     private LevelManager levelManager=new LevelManager();
     private static  String valueinstring=null;
 
+    public static String currentLevel="1";
+
+    //private Button buttonLevelII;
   public static Button buttonLevelII=null;
+    public static Button buttonLevelIII=null;
+
+  //private static PlayActivity playActivity;
+    private static  PlayActivity playActivity=new PlayActivity();
+
+  public PlayActivity(){
+
+
+  }
+
+  public static PlayActivity getPlayActivity(){
+
+      return playActivity;
+  }
 
 
     @Override
@@ -24,28 +41,35 @@ public class PlayActivity extends Activity {
         setContentView(R.layout.activity_play);
 
         final Button buttonLevelI=(Button)findViewById(R.id.btnlevel1);
-         buttonLevelII=(Button)findViewById(R.id.btnlevel2);
+        buttonLevelII=(Button)findViewById(R.id.btnlevel2);
+        //this.buttonLevelII=buttonLevelII;
+        buttonLevelIII=(Button)findViewById(R.id.btnlevel3);
 
-        /*GridView gridView=(GridView)findViewById(R.id.gridview);
-        ButtonAdapter buttonAdapter=new ButtonAdapter(this,buttons);
-        gridView.setAdapter(buttonAdapter);*/
+    }
 
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstance){
 
-         //valueinstring=levelManager.getCurrentlevelel();
+        super.onSaveInstanceState(savedInstance);
+        savedInstance.putString("myCurrentString",currentLevel);
 
-        valueinstring=LevelManager.currentlevelel;
+    }
 
-        switch (valueinstring){
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstance){
 
-            /*case "1":
-                buttonLevelI.setEnabled(true);
-                break;*/
+      super.onRestoreInstanceState(savedInstance);
 
-            case"2":
-                buttonLevelII.setEnabled(true);
+      String myCurrentLevel=savedInstance.getString("myCurrentString");
+
+        switch(myCurrentLevel){
+
+                case "2":
+                    buttonLevelII.setEnabled(true);
                 break;
         }
+
     }
 
 
@@ -55,12 +79,12 @@ public class PlayActivity extends Activity {
         Intent i=new Intent(this,PlatformActivity.class);
         startActivity(i);
         //buttonLevelII.setEnabled(true);
-        finish();
+        //finish();
 
         /*
-        final Button buttonLevelII=(Button)findViewById(R.id.btnlevel2);
-        buttonLevelII.setEnabled(true);
-        */
+        final Button buttonLevelII=(Button)findViewById(R.id.btnlevel2);*/
+       // buttonLevelII.setEnabled(true);
+
 
 
 
@@ -72,7 +96,8 @@ public class PlayActivity extends Activity {
         //LevelII levelII=new LevelII();
         Intent i=new Intent(this,PlatformActivity2.class);
         startActivity(i);
-        finish();
+
+        //finish();
 
 
 
@@ -83,6 +108,23 @@ public class PlayActivity extends Activity {
 
         Intent i=new Intent(this,MenuActivity.class);
         startActivity(i);
+
         finish();
     }
-}
+
+    public Button getButtonLevelII(){
+
+       //buttonLevelII=(Button)findViewById(R.id.btnlevel2);
+      //buttonLevelII=new Button(getApplicationContext());
+      return buttonLevelII;
+    }
+
+
+    @Override
+    protected void onPause(){
+
+      super.onPause();
+
+    }
+
+}//end PlayActivity class

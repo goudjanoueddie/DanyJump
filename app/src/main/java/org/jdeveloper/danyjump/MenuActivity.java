@@ -64,8 +64,15 @@ public class MenuActivity extends FragmentActivity {
         startActivity(i);
         finish();*/
 
-        Intent i=new Intent(this,PlayActivity.class);
+        /*Intent i=new Intent(this,PlayActivity.class);
+        //i.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(i);
+        finish();*/
+
+        Intent intent=new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        intent.setClassName(this,"org.jdeveloper.danyjump.PlayActivity");
+        startActivity(intent);
         finish();
 
 

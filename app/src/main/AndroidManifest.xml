@@ -12,7 +12,9 @@
 
         <activity android:name=".PlayActivity"
                   android:screenOrientation="landscape"
-                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:alwaysRetainTaskState="true"
+                  android:launchMode="singleInstance">
 
         </activity>
         <activity

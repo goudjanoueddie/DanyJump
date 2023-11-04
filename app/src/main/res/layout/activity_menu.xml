@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/levelx7background"
+    android:orientation="horizontal"
+    tools:context=".MenuActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewplayer"
+                android:layout_width="338dp"
+                android:layout_height="194dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+
+                android:contentDescription="TODO"
+                android:src="@drawable/player" />
+
+
+            <ImageView
+                android:id="@+id/imageCube"
+                android:layout_width="338dp"
+                android:layout_height="190dp"
+                android:layout_margin="5dp"
+
+
+                android:contentDescription="TODO"
+                android:src="@drawable/cube2" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnplay"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/play"
+                android:onClick="btnPlayClick"
+                android:text="PLAY" />
+
+            <Button
+
+                android:id="@+id/btnInstructions"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:drawableLeft="@drawable/instruction"
+                android:onClick="btinstructions"
+                android:text="INSTRUCTIONS" />
+
+            <!--<Button
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="5dp"
+                android:text="Weight 2" />-->
+
+            <Button
+                android:id="@+id/btnbuycoin"
+
+                android:text="BUY COIN"
+                android:drawableLeft="@drawable/coinbuy"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+
+
+                />
+
+            <Button
+                android:id="@+id/btnquit"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableLeft="@drawable/quitter"
+                android:onClick="btnLeaveClick"
+                android:text="LEAVE" />
+
+            <!-- android:background="@drawable/custom_button"-->
+            <!--<ImageButton
+                android:id="@+id/btnFindMe"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/brickblue"
+                android:layout_height="wrap_content"
+                android:background="@drawable/findme" />-->
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- <HorizontalLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="197dp"
+            android:layout_height="372dp"
+            android:layout_centerInParent="true"
+
+            android:contentDescription="TODO"
+            android:src="@drawable/playerstart" />
+
+
+    </HorizontalLayout>
+
+    <HorizontalLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+
+            android:text="Weight 1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="Weight 2" />
+
+
+
+    </HorizontalLayout>-->
+
+
+    <!--<HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="197dp"
+                android:layout_height="154dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/playerstart"
+                android:contentDescription="TODO" />
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </LinearLayout>
+
+
+
+    </HorizontalScrollView>-->
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

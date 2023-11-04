@@ -5,8 +5,8 @@ import java.util.Random;
 public class Boulders extends GameObject {
 
     Boulders(float worldStartX,float worldStartY,char type){
-        final float HEIGHT=1;
-        final float WIDTH=3;
+        final float HEIGHT=2;
+        final float WIDTH=5;
 
         setHeight(HEIGHT);
         setWidth(WIDTH);

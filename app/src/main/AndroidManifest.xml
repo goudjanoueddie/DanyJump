@@ -9,17 +9,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="org.jdeveloper.danyjump.PlatformActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="landscape">
 
+        <activity android:name=".PlayActivity"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:alwaysRetainTaskState="true"
+                  android:launchMode="singleInstance">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
 
+        <activity
+            android:name=".InstructionsActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".PlatformActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+
+        <activity android:name=".PlatformActivity2"
+                    android:screenOrientation="landscape"
+                    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>
